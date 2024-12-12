@@ -1,29 +1,24 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "../styles/globals.css";
-
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Nav from "../componets/nav";
 
 export const metadata = {
   title: "Learning tutorial",
   description: "Understanding routing, rendering and api in next",
+  icons: {
+    icon: '/awura3.jpg', // Path to your favicon file in the public folder
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body>
+       
+        <main>
+        <Nav />
+          {children}
+        </main>
       </body>
     </html>
   );

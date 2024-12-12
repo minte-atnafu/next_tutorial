@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",i
+        foreground: "var(--foreground)",
       },
     },
   },
